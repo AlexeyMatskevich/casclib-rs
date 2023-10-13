@@ -259,7 +259,7 @@ impl<'a> FileEntry<'a> {
                 self.storage.handle,
                 std::mem::transmute(name.as_ptr()),
                 0,
-                0,
+                32,
                 &mut file_handle as *mut HANDLE,
             );
             if !ok {
