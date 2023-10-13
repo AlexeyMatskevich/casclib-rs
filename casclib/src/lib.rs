@@ -258,8 +258,8 @@ impl<'a> FileEntry<'a> {
             let ok = casclib::CascOpenFile(
                 self.storage.handle,
                 std::mem::transmute(name.as_ptr()),
-                0,
-                32,
+                0x00000000,
+                0x00000020,
                 &mut file_handle as *mut HANDLE,
             );
             if !ok {
